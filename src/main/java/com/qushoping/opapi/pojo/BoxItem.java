@@ -1,5 +1,6 @@
 package com.qushoping.opapi.pojo;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,6 +12,7 @@ import java.util.Date;
  * @author yinguilong
  * @Time 2019/6/4 22:15
  **/
+@Entity
 public class BoxItem {
     /**
      * id

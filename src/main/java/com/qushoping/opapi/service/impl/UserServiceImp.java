@@ -1,7 +1,8 @@
-package com.qushoping.opapi.service;
+package com.qushoping.opapi.service.impl;
 
 import com.qushoping.opapi.pojo.User;
 import com.qushoping.opapi.repository.UserRepository;
+import com.qushoping.opapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

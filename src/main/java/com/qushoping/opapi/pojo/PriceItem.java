@@ -31,7 +31,7 @@ public class PriceItem {
     /**
      * 更新时间
      */
-    private Date updateTime;
+    private Long updateTime;
     /**
      * 活动价格
      */
