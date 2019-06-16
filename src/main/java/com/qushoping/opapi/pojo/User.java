@@ -2,10 +2,7 @@ package com.qushoping.opapi.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.annotations.ApiParam;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.Generated;
+import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,16 +10,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
+/**
+ * @author yinguilong
+ */
 @ApiModel("用户信息")
 @Entity
-@Setter
-@Getter
-public class user implements Serializable {
+@Data
+public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ApiModelProperty("用户id")
     private Long id;
+    @ApiModelProperty("用户昵称")
+    private  String userCode;
     @ApiModelProperty("用户名称")
     private String userName;
     @ApiModelProperty("用户密码")

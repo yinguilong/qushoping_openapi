@@ -1,16 +1,22 @@
 package com.qushoping.opapi.pojo;
 
 import io.swagger.annotations.ApiModel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+/**
+ * @author yinguilong
+ */
 @ApiModel("用户建议")
 @Entity
-@Setter
-@Getter
-public class userAdvice {
+@Data
+public class UserAdvice {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer status;
     private String content;

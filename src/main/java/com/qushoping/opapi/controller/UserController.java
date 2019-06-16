@@ -1,8 +1,9 @@
 package com.qushoping.opapi.controller;
 
 import com.qushoping.opapi.pojo.User;
-import io.swagger.annotations.Api;
+import com.qushoping.opapi.service.UserService;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,21 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author yinguilong
  */
-@Api("首页")
+@RequestMapping("/user")
 @RestController
-public class HomeController {
+public class UserController {
+    @Autowired
+    private UserService userService;
 
-
-    /**
-     * 首页
-     * @return
-     */
-    @ApiOperation("默认首页")
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index() {
-
-        return "helloWord";
+    @ApiOperation("添加用户")
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public User add(@RequestBody User u) {
+//        if(null==u)
+//            return
+        return u;
     }
-
-
 }
