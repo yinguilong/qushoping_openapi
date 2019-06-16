@@ -12,7 +12,7 @@ import java.util.List;
  * @author yinguilong
  */
 @Service
-public class UserServiceImp implements UserService {
+public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository _userRepository;
 
